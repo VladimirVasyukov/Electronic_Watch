@@ -15,11 +15,11 @@ public class Controller {
         this.view = view;
     }
 
-    public void calculation() {
+    public void calculate() {
         int seconds = scanner.nextInt();
         seconds = Math.max(seconds, 0);
-        view.printResult(processor.calculateHoursOfElectronicWatch(seconds, SECONDS_PER_MINUTE, HOURS_PER_DAY),
-            processor.calculateMinutesOfElectronicWatch(seconds, SECONDS_PER_MINUTE),
-            processor.calculateSecondsOfElectronicWatch(seconds, SECONDS_PER_MINUTE));
+        view.printResult(processor.calculateHours(seconds, SECONDS_PER_MINUTE, HOURS_PER_DAY),
+            processor.calculateMinutes(seconds, SECONDS_PER_MINUTE),
+            processor.calculateSeconds(seconds, SECONDS_PER_MINUTE));
     }
 }

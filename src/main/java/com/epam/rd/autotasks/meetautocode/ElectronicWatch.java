@@ -17,6 +17,6 @@ public class ElectronicWatch {
 
     public void run() {
         Controller controller = new Controller(new Processor(), new View());
-        controller.calculation();
+        controller.calculate();
     }
 }

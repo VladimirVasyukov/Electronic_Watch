@@ -1,16 +1,17 @@
 package com.epam.rd.autotasks.meetautocode.Program;
 
 public class Processor {
-    public int calculateHoursOfElectronicWatch(int seconds, int secondsPerMinute, int hoursPerDay) {
-        return ((seconds / secondsPerMinute) / secondsPerMinute) % hoursPerDay;
-
+    public int calculateHours(int seconds, int secondsPerMinute, int hoursPerDay) {
+        int minutesTimesHours = seconds / secondsPerMinute;
+        return (minutesTimesHours / secondsPerMinute) % hoursPerDay;
     }
 
-    public int calculateMinutesOfElectronicWatch(int seconds, int secondsPerMinute) {
-        return (seconds / secondsPerMinute) % secondsPerMinute;
+    public int calculateMinutes(int seconds, int secondsPerMinute) {
+        int minutesTimesHours = seconds / secondsPerMinute;
+        return minutesTimesHours % secondsPerMinute;
     }
 
-    public int calculateSecondsOfElectronicWatch (int seconds, int secondsPerMinute) {
+    public int calculateSeconds (int seconds, int secondsPerMinute) {
         return seconds % secondsPerMinute;
     }
 }
